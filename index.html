@@ -5,20 +5,27 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
-			$('#cat0').click(function(){
-
-			})
-
-			// $('img').click(function(){
-			// 	$(this).hide().show('data-alt-src')
+			// $('#cat0').click(function(){
+			// 	$('#cat0').hide()
+			// 	$('#cat0').attr("src", "img/ninja0.png") 
+			// 	$('#cat0').show()
+			// 	$('#cat0').click(function(){
+			// 		$('#cat0').hide()
+			// 		$('#cat0').attr("src", "img/cat0.png") 
+			// 		$('#cat0').show()
+			// 	})
 			// });
 
-			// $('img').click(function(){
-			// 	console.log('')
-			// })
-
-			
-		})
+			$('img').click(function(){
+				var temp = $(this).attr("src");
+				var next = $(this).attr("data-alt-src");
+				$(this).attr("src", next);
+				$(this).attr("data-alt-src", temp);
+				console.log("temp="+temp);
+				console.log("next="+next);
+			})
+	
+		});
 	</script>
 	<style type="text/css">
 		img {
@@ -34,11 +41,13 @@
 </head>
 <body>
 	<div id="cat">
-		<img id="cat0" src="img/cat0.png" data-alt-src="img/ninja0.png">
-		<img id="cat1" src="img/cat1.png" data-alt-src="img/ninja1.png">
-		<img id="cat2" src="img/cat2.png" data-alt-src="img/ninja2.png">
-		<img id="cat3" src="img/cat3.png" data-alt-src="img/ninja3.png">
-		<img id="cat4" src="img/cat4.png" data-alt-src="img/ninja4.png">
+		<img id="cat0" src="img/cat0.png" data-alt-src="img/ninja0.png"/>
+		<img id="cat1" src="img/cat1.png" data-alt-src="img/ninja1.png"/>
+		<img id="cat2" src="img/cat2.png" data-alt-src="img/ninja2.png"/>
+		<img id="cat3" src="img/cat3.png" data-alt-src="img/ninja3.png"/>
+		<img id="cat4" src="img/cat4.png" data-alt-src="img/ninja4.png"/>
+	</div>
+	<div id="dog">
 	</div>
 <!-- 	<div id="ninja">
 		<img src="img/ninja0.png">
